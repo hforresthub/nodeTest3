@@ -1,1 +1,6 @@
-{"name":"hal", "job":"frontend developer", "activity":"coding"}
+{
+	"name":"Hal", 
+	"job":"Frontend Developer", 
+	"activity":"Coding",
+	"favGames": ["Minecraft", "Skyrim", "Valheim", "Kenshi"]
+}

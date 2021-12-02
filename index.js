@@ -18,5 +18,30 @@ fs.readFile('./file.json', (err, data) => {
 	}
 
 	// handle data normally if no errors
-	console.log(JSON.parse(data));
+	console.log(JSON.parse(data).favGames);
 })
+
+let done = true
+
+const isComplete = new Promise((resolve, reject) => {
+	if (done) {
+		const workDone = "The work has completed"
+		resolve(workDone)
+	}
+	else {
+		const why = "The work has not yet completed"
+		reject(why)
+	}
+})
+
+const checkCompleteness = () => {
+	isComplete
+		.then(ok => {
+			console.log(ok);
+		})
+		.catch(err => {
+			console.error(err);
+		})
+}
+
+checkCompleteness()

@@ -51,6 +51,7 @@ const getFile = (filename) => {
 		fs.readFile(filename, (err, data) => {
 			if (err) {
 				// error handling
+				console.log("custom error");
 				reject(err)
 				return
 			}
